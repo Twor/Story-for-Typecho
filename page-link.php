@@ -94,7 +94,9 @@ $this->need('header.php');
 
         }
     }
-    creatArticle(datas);
+    console.log(diytext.length);
+    console.log(links.length);
+    if (diytext.length !== 0 && diytext.links !== 0) creatArticle(datas);
 </script>
 
 <?php $this->need('footer.php'); ?>
