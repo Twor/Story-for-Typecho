@@ -64,7 +64,11 @@ if ($this->options->style_BG) {
                         </a>
                         <!-- 标题结束 -->
                         <a id="btn-menu" href="javascript:isMenu();">
-                            <span class="b"><i class="fas fa-bars"></i></span>
+                            <?php if ($this->options->isIconNav) : ?>
+                                <span class="b"><i class="fas fa-bars"></i></span>
+                            <?php else : ?>
+                                <span class="b">.</span>
+                            <?php endif; ?>
                         </a>
                         <a href="javascript:isMenu1();">
                             <?php if ($this->options->isIconNav) : ?>
