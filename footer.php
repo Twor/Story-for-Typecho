@@ -62,6 +62,7 @@
             $('#menu-page').fadeOut(300);
         } else {
             $('#menu-page').fadeIn(300);
+            $('#search-box').fadeOut(300);
         }
     }
 
@@ -75,7 +76,8 @@
             }
         } else {
             if (c != 'auto') {
-                alert('人家是导航树哦！只有在特定的文章页面才会出现的。');
+                // alert('人家是导航树哦！只有在特定的文章页面才会出现的。');
+                return false;
             }
         }
     }
@@ -85,6 +87,7 @@
             $('#search-box').fadeOut(300);
         } else {
             $('#search-box').fadeIn(300);
+            $('#menu-page').fadeOut(300);
         }
     }
 

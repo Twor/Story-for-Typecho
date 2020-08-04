@@ -2,7 +2,6 @@
 <?php require_once 'functions.php'; ?>
 <!DOCTYPE HTML>
 <?php
-require_once 'config.php';
 if ($this->options->isIconNav) {
     echo '<style>';
     echo "\n";
@@ -59,7 +58,7 @@ if ($this->options->isIconNav) {
                             <?php $logo = siteName($this->options->titleName);
                             $i = 0;
                             while ($i < $logo['letterLen']) : ?>
-                                <span class="<?php echo $logo['colors'][$i] ?>"><?php echo $logo['letter'][$i] ?></span>
+                                <span class="<?php echo $logo['colors'][$i] ?: 'b' ?>"><?php echo $logo['letter'][$i] ?></span>
                             <?php $i++;
                             endwhile; ?>
                         </a>
@@ -69,14 +68,14 @@ if ($this->options->isIconNav) {
                         </a>
                         <a href="javascript:isMenu1();">
                             <?php if ($this->options->isIconNav) : ?>
-                                <span id="menu-1" class="bf"><i class="fas fa-caret-square-down"></i></i></span>
+                                <span id="menu-1" class="bf"><i class="fas fa-chevron-circle-down"></i></span>
                             <?php else : ?>
                                 <span id="menu-1" class="bf">1</span>
                             <?php endif; ?>
                         </a>
                         <a href="javascript:isMenu2();">
                             <?php if ($this->options->isIconNav) : ?>
-                                <span id="menu-2" class="bf"><i class="fas fa-stream"></i></span>
+                                <span id="menu-2" class="bf"><i class="fas fa-align-right"></i></span>
                             <?php else : ?>
                                 <span id="menu-2" class="bf">2</span>
                             <?php endif; ?>
