@@ -17,7 +17,7 @@
 <script src="<?php $this->options->themeUrl('assert/js/prism.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('assert/js/zoom-vanilla.min.js'); ?>"></script>
 <script>
-    <?php if ($GLOBALS['isAutoNav'] == 'on') : ?>
+    <?php if ($this->options->isAutoNav) : ?>
         var b = document.getElementsByClassName('b');
         var w = document.getElementsByClassName('w');
         var menupgMargin = (b.length + w.length) * 28;
@@ -133,7 +133,7 @@
     }
 
     <?php if ($this->is('post')) : ?>
-        <?php $postConfig = post_config($this); ?>
+        <?php $postConfig = post_config($this, $this->options->isTorTree()); ?>
         <?php if ($postConfig['isTorTree']) : ?>
             isMenu2('auto');
         <?php endif; ?>
