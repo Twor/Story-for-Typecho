@@ -92,7 +92,18 @@ function post_config($thiss, $isTorTree)
     return $rst;
 }
 
+<<<<<<< HEAD
 function siteName($siteName)
+=======
+/**
+ * logo字符处理
+ *
+ * @author Twor
+ * @param string $siteName
+ * @return array
+ */
+function siteName(string $siteName)
+>>>>>>> txperl
 {
     list($letter, $colors) = explode(":", $siteName);
     $letterLen = mb_strlen($letter, 'utf8');
@@ -101,6 +112,7 @@ function siteName($siteName)
     $arrayName = array('letterLen' => $letterLen, 'letter' => $letterArr, 'colors' => $colorsArr);
     return $arrayName;
 }
+<<<<<<< HEAD
 function themeConfig($themeConfig)
 {
     $titleName = new Typecho_Widget_Helper_Form_Element_Text('titleName', NULL, 'YUMOE:bbwbb', _t('站点名称'), _t('格式[文本:颜色]，b黑色 w白色。如果文本超过五个字符请开启自适应'));
@@ -114,5 +126,28 @@ function themeConfig($themeConfig)
     $isIconNav = new Typecho_Widget_Helper_Form_Element_Radio('isIconNav', array(0 => '不开启', 1 => '开启'), 0, _t('将导航栏中的 1,2,3 替换成图标'));
     $themeConfig->addInput($isIconNav);
     $isRSS = new Typecho_Widget_Helper_Form_Element_Radio('isRSS', array(0 => '不开启', 1 => '开启'), 0, _t('在菜单栏中加入 RSS 按钮'));
+=======
+
+/**
+ * 后台主题配置
+ *
+ * @author Twor
+ * @param Typecho_Widget_Helper_Form $themeConfig
+ * @return void
+ */
+function themeConfig(Typecho_Widget_Helper_Form $themeConfig)
+{
+    $titleName = new Typecho_Widget_Helper_Form_Element_Text('titleName', NULL, 'YUMOE:bbwbb', _t('站点名称'), _t('格式[文本:颜色(b黑色|w白色)],默认五个字符(超出或少于请开启自适应)'));
+    $themeConfig->addInput($titleName);
+    $style_BG = new Typecho_Widget_Helper_Form_Element_Text('style_BG', NULL, NULL, _t('背景图'), _t('背景图设置。填入图片 URL 地址，留空为关闭'));
+    $themeConfig->addInput($style_BG);
+    $isIconNav = new Typecho_Widget_Helper_Form_Element_Radio('isIconNav', array(0 => '不开启', 1 => '开启'), 0, _t('导航栏图标'));
+    $themeConfig->addInput($isIconNav);
+    $isTorTree = new Typecho_Widget_Helper_Form_Element_Radio('isTorTree', array(0 => '不开启', 1 => '开启'), 0, _t('导航树'));
+    $themeConfig->addInput($isTorTree);
+    $isAutoNav = new Typecho_Widget_Helper_Form_Element_Radio('isAutoNav', array(0 => '不开启', 1 => '开启'), 1, _t('导航自适应'));
+    $themeConfig->addInput($isAutoNav);
+    $isRSS = new Typecho_Widget_Helper_Form_Element_Radio('isRSS', array(0 => '不开启', 1 => '开启'), 0, _t('RSS订阅'));
+>>>>>>> txperl
     $themeConfig->addInput($isRSS);
 }

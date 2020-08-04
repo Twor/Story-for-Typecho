@@ -2,10 +2,17 @@
 <?php require_once 'functions.php'; ?>
 <!DOCTYPE HTML>
 <?php
+<<<<<<< HEAD
 if ($this->options->isIconNav) {
     echo '<style>';
     echo "\n";
     echo 'body{ background: #fff; } body::before{ background: url(' . $this->options->isIconNav() . ') center/cover no-repeat; } blockquote::before{ background: transparent !important; }';
+=======
+if ($this->options->style_BG) {
+    echo '<style>';
+    echo "\n";
+    echo 'body{ background: #fff; } body::before{ background: url(' .  $this->options->style_BG . ') center/cover no-repeat; } blockquote::before{ background: transparent !important; }';
+>>>>>>> txperl
     echo "\n";
     echo '</style>';
     echo "\n";
@@ -31,7 +38,11 @@ if ($this->options->isIconNav) {
     <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl('assert/css/zoom.css'); ?>">
     <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl('assert/css/main.css'); ?>">
     <?php if ($this->options->isIconNav) : ?>
+<<<<<<< HEAD
         <link type="text/css" rel="stylesheet" href="<?php echo "https://cdn.bootcdn.net/ajax/libs/font-awesome/5.14.0/css/all.min.css" ?>">
+=======
+        <link type="text/css" rel="stylesheet" href="<?php $this->options->themeUrl('assert/css/twemoji-awesome.css'); ?>">
+>>>>>>> txperl
     <?php endif; ?>
 
     <!--[if lt IE 9]>
@@ -68,21 +79,33 @@ if ($this->options->isIconNav) {
                         </a>
                         <a href="javascript:isMenu1();">
                             <?php if ($this->options->isIconNav) : ?>
+<<<<<<< HEAD
                                 <span id="menu-1" class="bf"><i class="fas fa-chevron-circle-down"></i></span>
+=======
+                                <span id="menu-1" class="bf"><i class="twa twa-flags"></i></span>
+>>>>>>> txperl
                             <?php else : ?>
                                 <span id="menu-1" class="bf">1</span>
                             <?php endif; ?>
                         </a>
                         <a href="javascript:isMenu2();">
                             <?php if ($this->options->isIconNav) : ?>
+<<<<<<< HEAD
                                 <span id="menu-2" class="bf"><i class="fas fa-align-right"></i></span>
+=======
+                                <span id="menu-2" class="bf"><i class="twa twa-evergreen-tree"></i></span>
+>>>>>>> txperl
                             <?php else : ?>
                                 <span id="menu-2" class="bf">2</span>
                             <?php endif; ?>
                         </a>
                         <a href="javascript:isMenu3();">
                             <?php if ($this->options->isIconNav) : ?>
+<<<<<<< HEAD
                                 <span id="menu-3" class="bf"><i class="fas fa-search"></i></span>
+=======
+                                <span id="menu-3" class="bf"><i class="twa twa-mag"></i></span>
+>>>>>>> txperl
                             <?php else : ?>
                                 <span id="menu-3" class="bf">3</span>
                             <?php endif; ?>
@@ -101,6 +124,7 @@ if ($this->options->isIconNav) {
                             </a>
                         <?php endif; ?>
                     </div>
+                    <span id="nav-tree">特定文章中显示</span>
                     <div id="search-box">
                         <form id="search" method="post" action="./" role="search">
                             <input autocomplete="off" type="text" name="s" id="menu-search" placeholder="Type something~" />
