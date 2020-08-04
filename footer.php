@@ -63,10 +63,7 @@
         } else {
             $('#menu-page').fadeIn(300);
             $('#search-box').fadeOut(300);
-<<<<<<< HEAD
-=======
             $('#nav-tree').fadeOut(300)
->>>>>>> txperl
         }
     }
 
@@ -80,10 +77,6 @@
             }
         } else {
             if (c != 'auto') {
-<<<<<<< HEAD
-                // alert('人家是导航树哦！只有在特定的文章页面才会出现的。');
-                return false;
-=======
                 if (document.getElementById('nav-tree').style.display == 'block') {
                     $('#nav-tree').fadeOut(300);
                 } else {
@@ -92,7 +85,6 @@
                     $('#menu-page').fadeOut(300);
                 }
                 // alert('人家是导航树哦！只有在特定的文章页面才会出现的。');
->>>>>>> txperl
             }
         }
     }
@@ -104,10 +96,7 @@
             document.getElementById('menu-search').setAttribute('placeholder', 'Search~');
             $('#search-box').fadeIn(300);
             $('#menu-page').fadeOut(300);
-<<<<<<< HEAD
-=======
             $('#nav-tree').fadeOut(300);
->>>>>>> txperl
         }
     }
 
@@ -156,11 +145,7 @@
     }
 
     <?php if ($this->is('post')) : ?>
-<<<<<<< HEAD
-        <?php $postConfig = post_config($this, $this->options->isTorTree()); ?>
-=======
         <?php $postConfig = post_config($this, $this->options->isTorTree); ?>
->>>>>>> txperl
         <?php if ($postConfig['isTorTree']) : ?>
             isMenu2('auto');
         <?php endif; ?>
