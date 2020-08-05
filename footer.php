@@ -25,7 +25,7 @@
         var menusrhWidth = (b.length + w.length - 1) * 28;
         document.getElementById('menu-page').style['margin-left'] = menupgMargin + 'px';
         document.getElementById('search-box').style['margin-left'] = srhboxMargin + 'px';
-        document.getElementById('me-link').style['margin-left'] = srhboxMargin + 'px';
+        document.getElementById('me-link').style['margin-left'] = menupgMargin + 'px';
         document.getElementById('menu-search').style['width'] = menusrhWidth + 'px';
         if (menusrhWidth < 140) {
             document.getElementById('menu-search').setAttribute('placeholder', 'Search~');
