@@ -110,6 +110,28 @@ function siteName(string $siteName)
 }
 
 /**
+ * 社交主页处理
+ *
+ * @author Twor
+ * @param string $meLink
+ * @return array
+ */
+function meLink($meLink)
+{
+    if (empty($meLink)) {
+        return false;
+        exit;
+    }
+    $meLinks = explode("\n", $meLink);
+    foreach ($meLinks as $key => $value) {
+        list($title, $link) = explode(",", $value);
+        $meLinkArr[] = array($title => $link);
+    }
+    $result = array_reduce($meLinkArr, 'array_merge', array());
+    return $result;
+}
+
+/**
  * 后台主题配置
  *
  * @author Twor
@@ -122,6 +144,8 @@ function themeConfig(Typecho_Widget_Helper_Form $themeConfig)
     $themeConfig->addInput($titleName);
     $style_BG = new Typecho_Widget_Helper_Form_Element_Text('style_BG', NULL, NULL, _t('背景图'), _t('背景图设置。填入图片 URL 地址，留空为关闭'));
     $themeConfig->addInput($style_BG);
+    $meLink = new Typecho_Widget_Helper_Form_Element_Textarea('meLink', NULL, NULL, _t('社交主页'), _t('如： github,https://github.com 一行一个'));
+    $themeConfig->addInput($meLink);
     $isIconNav = new Typecho_Widget_Helper_Form_Element_Radio('isIconNav', array(0 => '不开启', 1 => '开启'), 0, _t('导航栏图标'));
     $themeConfig->addInput($isIconNav);
     $isTorTree = new Typecho_Widget_Helper_Form_Element_Radio('isTorTree', array(0 => '不开启', 1 => '开启'), 0, _t('导航树'));

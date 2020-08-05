@@ -105,7 +105,17 @@ if ($this->options->style_BG) {
                             </a>
                         <?php endif; ?>
                     </div>
-                    <span id="nav-tree">特定文章中显示</span>
+                    <div id="me-link">
+                        <?php $meLink = meLink($this->options->meLink);
+                        if ($meLink) {
+                            foreach ($meLink as $title => $link) {
+                        ?>
+                                <a href="<?php echo $link; ?>">
+                                    <li><?php echo $title; ?></li>
+                                </a>
+                        <?php }
+                        } ?>
+                    </div>
                     <div id="search-box">
                         <form id="search" method="post" action="./" role="search">
                             <input autocomplete="off" type="text" name="s" id="menu-search" placeholder="Type something~" />
@@ -113,7 +123,6 @@ if ($this->options->style_BG) {
                     </div>
                 </div>
             </div>
-        </div>
     </header>
 
     <div id="body" class="clearfix">

@@ -826,7 +826,7 @@ div#archives .mon span {
     font-size: 1.2em;
 }
 
-#menu-page {
+#menu-page,#me-link {
     display: none;
     position: absolute;
     z-index: 100;
@@ -849,24 +849,27 @@ div#archives .mon span {
     background-color: #555;
 }
 
+#me-link li {
+    transition: all .24s;
+    list-style: none;
+    color: #fff;
+    background-color: #414141;
+    width: 84px;
+    height: 36px;
+    line-height: 40px;
+    padding: 0 12px;
+    overflow: hidden;
+}
+
+#me-link li:hover {
+    background-color: #555;
+}
+
 #search-box {
     display: none;
     position: absolute;
     margin-left: 252px;
     overflow: hidden;
-}
-#nav-tree {
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    float: left;
-    outline: none;
-    height: 26px;
-    width: 140px;
-    border: 0;
-    background-color: #414141;
-    padding-left: 5px;
-    color: #fff;
 }
 
 #search-box input {
