@@ -72,14 +72,14 @@ if ($this->options->style_BG) {
                         </a>
                         <a href="javascript:isMenu1();">
                             <?php if ($this->options->isIconNav) : ?>
-                                <span id="menu-1" class="bf"><i class="fas fa-chevron-circle-down"></i></span>
+                                <span id="menu-1" class="bf"><i class="fas fa-caret-square-down"></i></span>
                             <?php else : ?>
                                 <span id="menu-1" class="bf">1</span>
                             <?php endif; ?>
                         </a>
                         <a href="javascript:isMenu2();">
                             <?php if ($this->options->isIconNav) : ?>
-                                <span id="menu-2" class="bf"><i class="fas fa-align-right"></i></span>
+                                <span id="menu-2" class="bf"><i class="fas fa-gamepad"></i></span>
                             <?php else : ?>
                                 <span id="menu-2" class="bf">2</span>
                             <?php endif; ?>
