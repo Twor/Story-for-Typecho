@@ -79,33 +79,21 @@
         }
     }
 
-    // function isMenu2(c = 'none') {
-    //     if (document.getElementById('torTree')) {
-    //         if ($("#torTree").attr('style') == 'display: none;') {
-    //             $("#torTree").fadeIn(300);
-    //             $("#torTree").css('display', 'inline-block');
-    //         } else {
-    //             $("#torTree").fadeOut(300);
-    //         }
-    //     } else {
-    //         if (c != 'auto') {
-    //             if (document.getElementById('nav-tree').style.display == 'block') {
-    //                 $('#nav-tree').fadeOut(300);
-    //             } else {
-    //                 $('#nav-tree').fadeIn(300);
-    //                 $('#search-box').fadeOut(300);
-    //                 $('#menu-page').fadeOut(300);
-    //             }
-    //             // alert('人家是导航树哦！只有在特定的文章页面才会出现的。');
-    //         }
-    //     }
-    // }
+    function navTree(c = 'none') {
+        if (document.getElementById('torTree')) {
+            if ($("#torTree").attr('style') == 'display: none;') {
+                $("#torTree").fadeIn(300);
+                $("#torTree").css('display', 'inline-block');
+            } else {
+                $("#torTree").fadeOut(300);
+            }
+        }
+    }
 
     function isMenu3() {
         if (document.getElementById('search-box').style.display == 'block') {
             $('#search-box').fadeOut(300);
         } else {
-            document.getElementById('menu-search').setAttribute('placeholder', 'Search~');
             $('#search-box').fadeIn(300);
             $('#menu-page').fadeOut(300);
             $('#me-link').fadeOut(300);
@@ -159,7 +147,7 @@
     <?php if ($this->is('post')) : ?>
         <?php $postConfig = post_config($this, $this->options->isTorTree); ?>
         <?php if ($postConfig['isTorTree']) : ?>
-            isMenu2('auto');
+            navTree('auto');
         <?php endif; ?>
 
         var $navs = $('.torList'),
