@@ -12,6 +12,33 @@
         </div>
     </div>
 </footer>
+<script src="<?php $this->options->themeUrl('assert/js/darkmode.js'); ?>"></script>
+<script>
+    // Plugin Initialization
+    var options = {
+        light: "<?php $this->options->themeUrl('assert/css/main.css'); ?>",
+        dark: "<?php $this->options->themeUrl('assert/css/dark.css'); ?>",
+        startAt: "23:00",
+        endAt: "06:00",
+        checkSystemScheme: true,
+        saveOnToggle: true
+    }
+    var DarkMode = new DarkMode(options)
+
+    // Function for `mode-toggler` button
+    var ModeToggler = document.getElementById('mode-toggler')
+    changeTogglerText()
+    ModeToggler.onclick = function() {
+        DarkMode.toggleMode()
+        changeTogglerText()
+    }
+
+    // Changes `mode-toggler` text on mode changing
+    function changeTogglerText() {
+        var currentMode = DarkMode.getMode()
+        ModeToggler.innerHTML = currentMode === 'light' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>'
+    }
+</script>
 
 <script src="https://lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="<?php $this->options->themeUrl('assert/js/prism.js'); ?>"></script>
@@ -52,10 +79,12 @@
             $('#menu-1').fadeOut(500);
             $('#menu-2').fadeOut(400);
             $('#menu-3').fadeOut(300);
+            $('#mode-toggler').fadeOut(300);
         } else {
             $('#menu-1').fadeIn(150);
             $('#menu-2').fadeIn(150);
             $('#menu-3').fadeIn(150);
+            $('#mode-toggler').fadeIn(150);
         }
     }
 

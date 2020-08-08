@@ -72,7 +72,7 @@ if ($this->options->style_BG) {
                         </a>
                         <a href="javascript:isMenu1();">
                             <?php if ($this->options->isIconNav) : ?>
-                                <span id="menu-1" class="bf"><i class="fas fa-caret-square-down"></i></span>
+                                <span id="menu-1" class="bf"><i class="fas fa-book-open"></i></span>
                             <?php else : ?>
                                 <span id="menu-1" class="bf">1</span>
                             <?php endif; ?>
@@ -89,6 +89,13 @@ if ($this->options->style_BG) {
                                 <span id="menu-3" class="bf"><i class="fas fa-search"></i></span>
                             <?php else : ?>
                                 <span id="menu-3" class="bf">3</span>
+                            <?php endif; ?>
+                        </a>
+                        <a>
+                            <?php if ($this->options->isIconNav) : ?>
+                                <span id="mode-toggler" class="bf"><i class="fas fa-sun"></i></span>
+                            <?php else : ?>
+                                <span id="mode-toggler" class="bf">4</span>
                             <?php endif; ?>
                         </a>
                     </div>
