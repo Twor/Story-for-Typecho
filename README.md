@@ -64,6 +64,20 @@ Version@[VeriPress](https://github.com/veripress/veripress): [Story-for-VeriPres
 
 请参考 [PR: 增加友链模板 #30](https://github.com/txperl/Story-for-Typecho/pull/30)。
 
+#### Actions
+
+> 自行fork后设置项目的Secrets
+
+SERVER_HOST     //服务器IP
+
+SERVER_KEY      //连接服务器的私匙
+
+SERVER_PATH     //上传到服务器的路径
+
+SERVER_PORT     //服务器ssh端口
+
+SERVER_USER     //服务器用户
+
 #### 其他
 
 其他没有特别说明的基本不需要修改，当然你也可以按照个人兴趣随意修改。
