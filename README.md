@@ -23,7 +23,6 @@ Version@[VeriPress](https://github.com/veripress/veripress): [Story-for-VeriPres
 ![screenshot](screenshot.png)
 
 ### 主题的一些食用说明
-```
 
 #### 站点名称
 
