@@ -23,24 +23,6 @@ Version@[VeriPress](https://github.com/veripress/veripress): [Story-for-VeriPres
 ![screenshot](screenshot.png)
 
 ### 主题的一些食用说明
-
-#### config.php
-
-Story 包含一个全局配置文件。
-
-```
-// on 为开启
-// off&其他 为关闭
-
-// 导航树
-$GLOBALS['isTorTree'] = 'off'; // 默认显示文章导航树
-
-// 样式
-$GLOBALS['isAutoNav'] = 'off'; // 自动设置导航栏中 margin 及 width 值（推荐开启）
-$GLOBALS['isIconNav'] = 'off'; // 将导航栏中的 1,2,3 替换成 Emoji 图标
-$GLOBALS['isRSS'] = 'off'; // 在菜单栏中加入 RSS 按钮
-
-$GLOBALS['style_BG'] = ''; // 背景图设置。填入图片 URL 地址，留空为关闭
 ```
 
 #### 站点名称
@@ -80,17 +62,6 @@ $GLOBALS['style_BG'] = ''; // 背景图设置。填入图片 URL 地址，留空
 ![set cover](https://i.loli.net/2020/08/01/uc36qYJQvEwICgA.png)
 
 #### 友链模板
-+---------------------------------------------------------------
-
-| 上面部是自定义内容
-
-| Links:
-
-| 博客名称,格言,博客链接,标签
-
-| 博客名称,格言,博客链接,标签
-
-+---------------------------------------------------------------
 
 请参考 [PR: 增加友链模板 #30](https://github.com/txperl/Story-for-Typecho/pull/30)。
 
