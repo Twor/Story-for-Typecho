@@ -18,7 +18,7 @@
     var options = {
         light: "<?php $this->options->themeUrl('assert/css/main.css'); ?>",
         dark: "<?php $this->options->themeUrl('assert/css/dark.css'); ?>",
-        startAt: "23:00",
+        startAt: "21:00",
         endAt: "06:00",
         checkSystemScheme: true,
         saveOnToggle: true
