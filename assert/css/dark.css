@@ -86,12 +86,12 @@ b {
 	color: #dc3545;
 }
 
-.dm-dark #comment-form textarea {
-	color: #ebe8e8;
+.dm-dark #comment-form {
+	background: #c7c7c7;
 }
 
-.dm-dark #comment-form .comment-buttons #submitComment {
-	color: #ebe8e8;
+.dm-dark #comment-form textarea {
+	background: #c7c7c7;
 }
 
 .dm-dark blockquote {
@@ -132,4 +132,12 @@ b {
 .dm-dark .posti .tag a:hover {
 	background: #ebe8e8;
 	color: #414141;
+}
+
+.dm-dark .nav-page ol .current a {
+	color: #ebe8e8;
+}
+
+.dm-dark .nav-page a {
+	color: #ebe8e8;
 }
